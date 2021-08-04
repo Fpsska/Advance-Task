@@ -11728,3 +11728,147 @@ th {
   padding: 0;
   text-align: left;
 }
+
+.header__number, .advantage-list__title, .registration__title, .registration__button {
+  font-family: "Ubuntu-Bold";
+  font-weight: 700;
+}
+
+.about, .about__date, .about__speaker, .advantage-list__item {
+  font-family: "Ubuntu-Regular";
+  font-weight: 400;
+}
+
+.about__title {
+  font-family: "BebasNeueBold";
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url("../fonts/Ubuntu-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BebasNeueBold";
+  src: url("../fonts/BebasNeueBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  position: relative;
+  background-color: #FFF;
+}
+
+.container {
+  max-width: 1155px;
+  margin: 0 auto;
+}
+
+.yellow-bg {
+  background-color: #fde509;
+}
+
+.header {
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: auto;
+  top: 0;
+  left: auto;
+  right: auto;
+}
+
+.header__number {
+  font-size: 24px;
+  color: #090909;
+  display: block;
+  text-align: end;
+}
+
+.about {
+  position: relative;
+  padding-top: 140px;
+  min-height: 1190px;
+  background-image: url(../images/header_background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__date-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.about__date {
+  font-size: 32px;
+  color: #000;
+  margin-left: 10px;
+}
+
+.about__title {
+  font-size: 68px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.about__speaker {
+  width: 200px;
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  font-size: 20px;
+  color: #FFF;
+}
+
+.advantage-list__item {
+  font-size: 20px;
+  color: #000;
+}
+
+.advantage-list__title {
+  font-size: 24px;
+  color: #000;
+}
+
+.advantage-list__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.registration__title {
+  font-size: 20px;
+  color: #FFF;
+}
+
+.registration__button {
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  width: 100%;
+  font-size: 32px;
+  margin: 6px 0 30px 0;
+  padding: 26px 50px;
+  color: #FFF;
+  background: -webkit-gradient(linear, left top, right top, from(#5800e8), color-stop(98.44%, #7d2dff));
+  background: -o-linear-gradient(left, #5800e8 0%, #7d2dff 98.44%);
+  background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
+  -webkit-box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
+          box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
+  border-radius: 48px;
+}
