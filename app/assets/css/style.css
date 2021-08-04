@@ -11729,17 +11729,17 @@ th {
   text-align: left;
 }
 
-.header__number, .advantage-list__title, .registration__title, .registration__button {
+.header__number, .advantage-list__title, .registration__title, .registration__button, .card__title-main, .card__title {
   font-family: "Ubuntu-Bold";
   font-weight: 700;
 }
 
-.about, .about__date, .about__speaker, .advantage-list__item {
+.about, .about__date, .about__speaker, .advantage-list__item, .card__subtitle {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
 
-.about__title {
+.about__title, .timetable__title {
   font-family: "BebasNeueBold";
   font-weight: 700;
 }
@@ -11857,9 +11857,9 @@ body {
 }
 
 .registration__button {
-  -webkit-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
   width: 100%;
   font-size: 32px;
   margin: 6px 0 30px 0;
@@ -11871,4 +11871,40 @@ body {
   -webkit-box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
           box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
   border-radius: 48px;
+}
+
+.timetable {
+  margin-top: 100px;
+}
+
+.timetable__title {
+  display: inline;
+  font-size: 68px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.card {
+  width: 362px;
+  min-height: 562px;
+  padding: 30px 34px;
+  background: #FFF;
+  border: 2px solid #fd6108;
+  border-radius: 25px;
+}
+
+.card__title-main {
+  font-size: 28px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.card__title {
+  font-size: 20px;
+  color: #000;
+}
+
+.card__subtitle {
+  font-size: 16px;
+  color: #fd6a0a;
 }
