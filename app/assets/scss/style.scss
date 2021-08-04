@@ -18,8 +18,15 @@ body {
     background-color: $yellow-color;
 }
 
-//
+.title {
+    display: inline;
+    @extend %bebas-bold;
+    font-size: 68px;
+    color: $black-color;
+    text-transform: uppercase;
+}
 
+// /.MODIFICATIORS
 .header {
     z-index: 1;
     width: 100%;
@@ -33,6 +40,7 @@ body {
         @extend %ub-bold;
         font-size: 24px;
         color: #090909;
+
         display: block;
         text-align: end;
     }
@@ -54,12 +62,14 @@ body {
         @extend %ub-regular;
         font-size: 32px;
         color: $black-color;
+
         margin-left: 10px;
     }
     &__title {
         @extend %bebas-bold;
         font-size: 68px;
         color: $black-color;
+
         text-transform: uppercase;
     }
     &__speaker {
@@ -67,6 +77,7 @@ body {
         position: absolute;
         top: 70%;
         left: 65%;
+
         @extend %ub-regular;
         font-size: 20px;
         color: $white-color;
@@ -108,14 +119,7 @@ body {
     }
 }
 .timetable {
-    margin-top: 100px;
-    &__title {
-        display: inline;
-        @extend %bebas-bold;
-        font-size: 68px;
-        color: $black-color;
-        text-transform: uppercase;
-    }
+    margin: 100px 0 200px 0;
 }
 .card {
     width: 362px;
@@ -124,11 +128,45 @@ body {
     background: $white-color;
     border: 2px solid #fd6108;
     border-radius: 25px;
-    &__title-main {
+    &__title_main {
         @extend %ub-bold;
         font-size: 28px;
         color: $black-color;
+
         text-transform: uppercase;
+    }
+    &__title {
+        // вынести в global
+        @extend %ub-bold;
+        font-size: 20px;
+        color: $black-color;
+    }
+    &__description {
+        @extend %ub-regular;
+        font-size: 16px;
+        color: #323232;
+    }
+    &__subtitle {
+        @extend %ub-regular; // вынести в global
+        font-size: 16px;
+        color: #fd6a0a;
+    }
+}
+.rules {
+    padding: 100px 0;
+    background-image: url(../images/rules_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    &__card {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 25px;
+        padding: 20px 32px;
+    }
+    &__card-small {
+        height: 100%;
     }
     &__title {
         @extend %ub-bold;
@@ -138,7 +176,23 @@ body {
     &__subtitle {
         @extend %ub-regular;
         font-size: 16px;
-        color: #fd6a0a;
+        color: #323232;
+    }
+    &__icon {
+        fill: transparent;
+        margin-right: 28px;
+    }
+    &__icon_first {
+        width: 44px;
+        height: 54px;
+    }
+    &__icon_second {
+        width: 42px;
+        height: 58px;
+    }
+    &__icon_third {
+        width: 52px;
+        height: 50px;
     }
 }
 
