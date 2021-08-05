@@ -27,6 +27,11 @@ $orange-color: #FD6A0A;
     color: $black-color;
 }
 
+
+svg {
+    flex-shrink: 0;
+}
+
 .yellow-bg {
     background-color: $yellow-color;
 }
@@ -51,4 +56,25 @@ $orange-color: #FD6A0A;
     font-size: 16px;
     line-height: 20px;
     color: #323232;
+}
+
+.list {
+    &__item {
+        @extend %ub-regular;
+        font-size: 20px;
+        color: $black-color;
+    }
+    &__title {
+        @extend %ub-bold;
+        font-size: 24px;
+        color: $black-color;
+    }
+    &__icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 6px;
+    }
+    &__title-worker {
+        font-size: 36px;
+    }
 }

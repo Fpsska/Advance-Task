@@ -11729,12 +11729,12 @@ th {
   text-align: left;
 }
 
-.title, .header__number, .advantage-list__title, .registration__title, .registration__button, .card__title_main {
+.title, .list__title, .header__number, .registration__title, .registration__button, .card__title_main {
   font-family: "Ubuntu-Bold";
   font-weight: 700;
 }
 
-.description, .about, .about__date, .about__speaker, .advantage-list__item, .card__date, .presents__subtitle {
+.description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
@@ -11742,6 +11742,11 @@ th {
 .title-section, .about__title, .presents__description {
   font-family: "BebasNeueBold";
   font-weight: 700;
+}
+
+svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .yellow-bg {
@@ -11765,6 +11770,26 @@ th {
   font-size: 16px;
   line-height: 20px;
   color: #323232;
+}
+
+.list__item {
+  font-size: 20px;
+  color: #000;
+}
+
+.list__title {
+  font-size: 24px;
+  color: #000;
+}
+
+.list__icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+.list__title-worker {
+  font-size: 36px;
 }
 
 @font-face {
@@ -11853,22 +11878,6 @@ body {
   left: 65%;
   font-size: 20px;
   color: #fff;
-}
-
-.advantage-list__item {
-  font-size: 20px;
-  color: #000;
-}
-
-.advantage-list__title {
-  font-size: 24px;
-  color: #000;
-}
-
-.advantage-list__icon {
-  width: 22px;
-  height: 22px;
-  margin-right: 6px;
 }
 
 .registration__title {
@@ -11963,7 +11972,7 @@ body {
 }
 
 .presents {
-  margin-top: 150px;
+  margin: 150px 0 165px 0;
 }
 
 .presents__item {
