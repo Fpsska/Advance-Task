@@ -11729,12 +11729,12 @@ th {
   text-align: left;
 }
 
-.title, .list__title, .header__number, .registration__title, .registration__button, .card__title_main {
+.btn, .title, .list .list__item-reviews, .list__title, .header__number, .registration__title, .card__title_main {
   font-family: "Ubuntu-Bold";
   font-weight: 700;
 }
 
-.description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle {
+.btn_review, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
@@ -11742,6 +11742,22 @@ th {
 .title-section, .about__title, .presents__description {
   font-family: "BebasNeueBold";
   font-weight: 700;
+}
+
+.btn_review.btn_review {
+  background: #e7e7e7;
+  color: #000;
+  border-radius: 80px;
+}
+
+.btn {
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#5800e8), color-stop(98.44%, #7d2dff));
+  background: -o-linear-gradient(left, #5800e8 0%, #7d2dff 98.44%);
+  background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
 }
 
 svg {
@@ -11766,7 +11782,7 @@ svg {
   color: #000;
 }
 
-.description {
+.description.description {
   font-size: 16px;
   line-height: 20px;
   color: #323232;
@@ -11790,6 +11806,10 @@ svg {
 
 .list__title-worker {
   font-size: 36px;
+}
+
+.list__title-reviews {
+  font-size: 32px;
 }
 
 @font-face {
@@ -11886,17 +11906,10 @@ body {
 }
 
 .registration__button {
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
-  transition: 0.2s linear;
   width: 100%;
   font-size: 32px;
   margin: 6px 0 30px 0;
   padding: 26px 50px;
-  color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#5800e8), color-stop(98.44%, #7d2dff));
-  background: -o-linear-gradient(left, #5800e8 0%, #7d2dff 98.44%);
-  background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
   -webkit-box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
           box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
   border-radius: 48px;
@@ -11912,7 +11925,7 @@ body {
   height: 100%;
   padding: 30px 34px;
   background: #fff;
-  border: 2px solid #FD6A0A;
+  border: 2px solid #fd6a0a;
   border-radius: 25px;
 }
 
@@ -11924,7 +11937,7 @@ body {
 
 .card__date {
   font-size: 16px;
-  color: #FD6A0A;
+  color: #fd6a0a;
 }
 
 .rules {
@@ -11999,7 +12012,7 @@ body {
 
 .presents__title {
   text-transform: uppercase;
-  color: #FD6A0A;
+  color: #fd6a0a;
   line-height: 26px;
 }
 
@@ -12019,4 +12032,81 @@ body {
 
 .presents__image {
   display: block;
+}
+
+.reviews {
+  margin-top: 150px;
+}
+
+.reviews__button {
+  border: 1px solid #5e07eb;
+  background: #fff;
+  color: #000;
+  width: 100%;
+  border-radius: 80px;
+  padding: 15px 0;
+}
+
+.reviews__button.active {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#5800e8), color-stop(98.44%, #7d2dff));
+  background: -o-linear-gradient(left, #5800e8 0%, #7d2dff 98.44%);
+  background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
+  width: 100%;
+  border-radius: 80px;
+  padding: 15px 0;
+}
+
+.reviews__card {
+  width: 208px;
+  min-height: 261px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #fd6108;
+  border-radius: 25px;
+  padding: 10px 10px;
+}
+
+.reviews__card.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffae18), color-stop(75.35%, #fd5907));
+  background: -o-linear-gradient(top, #ffae18 0%, #fd5907 75.35%);
+  background: linear-gradient(180deg, #ffae18 0%, #fd5907 75.35%);
+}
+
+.reviews__image {
+  border-radius: 100%;
+  border: 2px solid #fd6108;
+  width: 120px;
+  height: 120px;
+  padding: 2px;
+}
+
+.reviews__image.active {
+  border: 2px solid #fff;
+}
+
+.reviews__image_main {
+  width: 275px;
+  height: 275px;
+  padding: 5px;
+}
+
+.reviews__name {
+  text-align: center;
+}
+
+.reviews__name.active {
+  color: #fff;
 }

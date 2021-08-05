@@ -74,14 +74,10 @@ body {
         color: $white-color;
     }
     &__button {
-        @extend %ub-bold;
-        transition: 0.2s linear;
         width: 100%;
         font-size: 32px;
         margin: 6px 0 30px 0;
         padding: 26px 50px;
-        color: $white-color;
-        background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
         box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
         border-radius: 48px;
     }
@@ -181,6 +177,61 @@ body {
     }
     &__image {
         display: block;
+    }
+}
+
+.reviews {
+    margin-top: 150px;
+    &__button {
+        border: 1px solid #5e07eb;
+        background: $white-color;
+        color: $black-color;
+        width: 100%;
+        border-radius: 80px;
+        padding: 15px 0;
+    }
+    &__button.active {
+        color: $white-color;
+        background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
+        width: 100%;
+        border-radius: 80px;
+        padding: 15px 0;
+    }
+    &__card {
+        width: 208px;
+        min-height: 261px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #fd6108;
+        border-radius: 25px;
+        padding: 10px 10px;
+    }
+    &__card.active {
+        background: linear-gradient(180deg, #ffae18 0%, #fd5907 75.35%);
+    }
+    &__image {
+        border-radius: 100%;
+        border: 2px solid #fd6108;
+        width: 120px;
+        height: 120px;
+        padding: 2px;
+    }
+    &__image.active {
+        border: 2px solid $white-color;
+    }
+    &__image_main {
+        width: 275px;
+        height: 275px;
+        padding: 5px;
+    }
+    &__name {
+        text-align: center;
+    }
+    &__name.active {
+        color: $white-color;
     }
 }
 @import "./media";

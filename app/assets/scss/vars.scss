@@ -1,7 +1,7 @@
 $white-color: #fff;
 $black-color: #000;
 $yellow-color: #fde509;
-$orange-color: #FD6A0A;
+$orange-color: #fd6a0a;
 
 %ub-bold {
     font-family: "Ubuntu-Bold";
@@ -27,6 +27,19 @@ $orange-color: #FD6A0A;
     color: $black-color;
 }
 
+.btn_review.btn_review {
+    @extend %ub-regular;
+    background: #e7e7e7;
+    color: $black-color;
+    border-radius: 80px;
+}
+
+.btn {
+    @extend %ub-bold;
+    transition: 0.2s linear;
+    color: $white-color;
+    background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
+}
 
 svg {
     flex-shrink: 0;
@@ -51,7 +64,7 @@ svg {
     color: $black-color;
 }
 
-.description {
+.description.description {
     @extend %ub-regular;
     font-size: 16px;
     line-height: 20px;
@@ -63,6 +76,9 @@ svg {
         @extend %ub-regular;
         font-size: 20px;
         color: $black-color;
+    }
+    .list__item-reviews.list__item-reviews {
+        @extend %ub-bold;
     }
     &__title {
         @extend %ub-bold;
@@ -76,5 +92,8 @@ svg {
     }
     &__title-worker {
         font-size: 36px;
+    }
+    &__title-reviews {
+        font-size: 32px;
     }
 }
