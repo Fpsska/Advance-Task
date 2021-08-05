@@ -11729,19 +11729,42 @@ th {
   text-align: left;
 }
 
-.header__number, .advantage-list__title, .registration__title, .registration__button, .card__title_main, .card__title, .rules__title {
+.title, .header__number, .advantage-list__title, .registration__title, .registration__button, .card__title_main {
   font-family: "Ubuntu-Bold";
   font-weight: 700;
 }
 
-.about, .about__date, .about__speaker, .advantage-list__item, .card__description, .card__subtitle, .rules__subtitle {
+.description, .about, .about__date, .about__speaker, .advantage-list__item, .card__date, .presents__subtitle {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
 
-.title, .about__title {
+.title-section, .about__title, .presents__description {
   font-family: "BebasNeueBold";
   font-weight: 700;
+}
+
+.yellow-bg {
+  background-color: #fde509;
+}
+
+.title-section {
+  display: inline;
+  font-size: 68px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 22px;
+  color: #000;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323232;
 }
 
 @font-face {
@@ -11770,23 +11793,12 @@ th {
 
 body {
   position: relative;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .container {
   max-width: 1155px;
   margin: 0 auto;
-}
-
-.yellow-bg {
-  background-color: #fde509;
-}
-
-.title {
-  display: inline;
-  font-size: 68px;
-  color: #000;
-  text-transform: uppercase;
 }
 
 .header {
@@ -11820,12 +11832,12 @@ body {
 .about__date-icon {
   width: 30px;
   height: 30px;
+  margin-right: 10px;
 }
 
 .about__date {
   font-size: 32px;
   color: #000;
-  margin-left: 10px;
 }
 
 .about__title {
@@ -11840,7 +11852,7 @@ body {
   top: 70%;
   left: 65%;
   font-size: 20px;
-  color: #FFF;
+  color: #fff;
 }
 
 .advantage-list__item {
@@ -11856,11 +11868,12 @@ body {
 .advantage-list__icon {
   width: 22px;
   height: 22px;
+  margin-right: 6px;
 }
 
 .registration__title {
   font-size: 20px;
-  color: #FFF;
+  color: #fff;
 }
 
 .registration__button {
@@ -11871,7 +11884,7 @@ body {
   font-size: 32px;
   margin: 6px 0 30px 0;
   padding: 26px 50px;
-  color: #FFF;
+  color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(#5800e8), color-stop(98.44%, #7d2dff));
   background: -o-linear-gradient(left, #5800e8 0%, #7d2dff 98.44%);
   background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
@@ -11887,9 +11900,10 @@ body {
 .card {
   width: 362px;
   min-height: 562px;
+  height: 100%;
   padding: 30px 34px;
-  background: #FFF;
-  border: 2px solid #fd6108;
+  background: #fff;
+  border: 2px solid #FD6A0A;
   border-radius: 25px;
 }
 
@@ -11899,19 +11913,9 @@ body {
   text-transform: uppercase;
 }
 
-.card__title {
-  font-size: 20px;
-  color: #000;
-}
-
-.card__description {
+.card__date {
   font-size: 16px;
-  color: #323232;
-}
-
-.card__subtitle {
-  font-size: 16px;
-  color: #fd6a0a;
+  color: #FD6A0A;
 }
 
 .rules {
@@ -11929,23 +11933,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ffffff;
+  background: #fff;
   border-radius: 25px;
   padding: 20px 32px;
 }
 
 .rules__card-small {
   height: 100%;
-}
-
-.rules__title {
-  font-size: 20px;
-  color: #000;
-}
-
-.rules__subtitle {
-  font-size: 16px;
-  color: #323232;
 }
 
 .rules__icon {
@@ -11966,4 +11960,54 @@ body {
 .rules__icon_third {
   width: 52px;
   height: 50px;
+}
+
+.presents {
+  margin-top: 150px;
+}
+
+.presents__item {
+  position: relative;
+}
+
+.presents__item::before {
+  content: url(../images/arrw-right.svg);
+  position: absolute;
+  top: -35%;
+  left: 95%;
+}
+
+.presents__item_second {
+  position: relative;
+}
+
+.presents__item_second::before {
+  content: url(../images/arrw-left.svg);
+  position: absolute;
+  top: -46%;
+  left: -15%;
+}
+
+.presents__title {
+  text-transform: uppercase;
+  color: #FD6A0A;
+  line-height: 26px;
+}
+
+.presents__description {
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.presents__subtitle {
+  color: #000;
+}
+
+.presents__number {
+  margin-right: 32px;
+}
+
+.presents__image {
+  display: block;
 }

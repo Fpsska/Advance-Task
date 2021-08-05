@@ -1,7 +1,7 @@
-$white-color: #FFF;
+$white-color: #fff;
 $black-color: #000;
 $yellow-color: #fde509;
-$orange-color: #fd6a0a;
+$orange-color: #FD6A0A;
 
 %ub-bold {
     font-family: "Ubuntu-Bold";
@@ -16,4 +16,39 @@ $orange-color: #fd6a0a;
 %bebas-bold {
     font-family: "BebasNeueBold";
     font-weight: 700;
+}
+
+@mixin title {
+    @extend %ub-regular;
+    color: $black-color;
+}
+@mixin subtitle {
+    @extend %ub-bold;
+    color: $black-color;
+}
+
+.yellow-bg {
+    background-color: $yellow-color;
+}
+
+.title-section {
+    display: inline;
+    @extend %bebas-bold;
+    font-size: 68px;
+    color: $black-color;
+    text-transform: uppercase;
+}
+
+.title {
+    @extend %ub-bold;
+    font-size: 20px;
+    line-height: 22px;
+    color: $black-color;
+}
+
+.description {
+    @extend %ub-regular;
+    font-size: 16px;
+    line-height: 20px;
+    color: #323232;
 }

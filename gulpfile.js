@@ -74,7 +74,7 @@ function browsersync() {  // live update
 
 function watching() {
     watch(["app/assets/scss/**/*.scss"], styles);
-    watch(["app/assets/js/**/*.js", "!app/assets/js/main.min.js"], scripts);
+    // watch(["app/assets/js/**/*.js", "!app/assets/js/main.min.js"], scripts);
     watch(["app/*.html"]).on("change", browserSync.reload);
 }
 
@@ -93,9 +93,10 @@ function build() {
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
-exports.scripts = scripts;
+// exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+// exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, browsersync, watching);
