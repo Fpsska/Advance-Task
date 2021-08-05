@@ -11729,12 +11729,12 @@ th {
   text-align: left;
 }
 
-.btn, .title, .list .list__item-reviews, .list__title, .header__number, .registration__title, .card__title_main {
+.btn, .title, .list .list__item-reviews, .list__title, .header__number, .registration__title, .card__title_main, .contacts__number, .contacts__email {
   font-family: "Ubuntu-Bold";
   font-weight: 700;
 }
 
-.btn_review, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle, .form__input {
+.btn_review, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle, .form__input, .requisites__item, .policy__item {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
@@ -12210,4 +12210,68 @@ body {
   border-radius: 60px;
   padding: 20px 0;
   width: 340px;
+}
+
+.footer {
+  background: #404143;
+  padding: 65px 0;
+}
+
+.footer__logo {
+  margin-bottom: 5px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social :last-child {
+  margin-right: 0;
+}
+
+.social__icon {
+  width: 33px;
+  height: 33px;
+}
+
+.contacts__number, .contacts__email {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.contacts__item {
+  margin-bottom: 2px;
+}
+
+.contacts :last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.requisites__item {
+  color: #dbdbdb;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.requisites :last-child {
+  margin-bottom: 0;
+}
+
+.policy__item {
+  color: #a7a7a7;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.policy :last-child {
+  margin-bottom: 0;
 }

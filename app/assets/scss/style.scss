@@ -298,4 +298,64 @@ body {
         width: 340px;
     }
 }
+
+.footer {
+    background: #404143;
+    padding: 65px 0;
+    &__logo {
+        margin-bottom: 5px;
+    }
+}
+.social {
+    display: flex;
+    &__item {
+        margin-right: 10px;
+    }
+    :last-child {
+        margin-right: 0;
+    }
+    &__icon {
+        width: 33px;
+        height: 33px;
+    }
+}
+.contacts {
+    &__number,
+    &__email {
+        @extend %ub-bold;
+        color: $white-color;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    &__item {
+        margin-bottom: 2px;
+    }
+    :last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+.requisites {
+    &__item {
+        @extend %ub-regular;
+        color: #dbdbdb;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+.policy {
+    &__item {
+        @extend %ub-regular;
+        color: #a7a7a7;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+}
 @import "./media";
