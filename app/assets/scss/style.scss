@@ -285,12 +285,26 @@ body {
         padding: 5px 10px;
     }
     &__checkbox {
-        width: 25px;
-        height: 25px;
-        background: $white-color;
-        border: none;
-        border-radius: 3px;
-        flex-shrink: 0;
+        display: none;
+    }
+    input[type="checkbox"]:checked + label::before {
+        background-image: url(../images/checkbox.svg);
+        background-size: 75%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__description {
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 25px;
+            height: 25px;
+            background: $white-color;
+            border: none;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
     }
     &__button {
         border-radius: 60px;

@@ -12197,13 +12197,26 @@ body {
 }
 
 .form__checkbox {
+  display: none;
+}
+
+.form input[type="checkbox"]:checked + label::before {
+  background-image: url(../images/checkbox.svg);
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__description::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
   width: 25px;
   height: 25px;
   background: #fff;
   border: none;
   border-radius: 3px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  margin-right: 5px;
 }
 
 .form__button {
