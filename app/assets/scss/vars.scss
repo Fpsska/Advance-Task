@@ -27,6 +27,12 @@ $orange-color: #fd6a0a;
     color: $black-color;
 }
 
+.container {
+    max-width: 1155px;
+    margin: 0 auto;
+}
+
+
 .btn_review.btn_review {
     @extend %ub-regular;
     background: #e7e7e7;
@@ -43,10 +49,15 @@ $orange-color: #fd6a0a;
 
 svg {
     flex-shrink: 0;
+    fill: transparent;
 }
 
 .yellow-bg {
     background-color: $yellow-color;
+}
+
+.yellow-bg_big {
+    font-size: 40px;
 }
 
 .title-section {
@@ -55,6 +66,9 @@ svg {
     font-size: 68px;
     color: $black-color;
     text-transform: uppercase;
+}
+.title-section_event {
+    font-size: 32px;
 }
 
 .title {

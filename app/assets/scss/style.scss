@@ -7,13 +7,6 @@ body {
     background-color: $white-color;
 }
 
-.container {
-    max-width: 1155px;
-    margin: 0 auto;
-}
-
-///
-
 .header {
     z-index: 1;
     width: 100%;
@@ -181,7 +174,7 @@ body {
 }
 
 .reviews {
-    margin-top: 150px;
+    margin: 150px 0 200px 0;
     &__button {
         border: 1px solid #5e07eb;
         background: $white-color;
@@ -232,6 +225,77 @@ body {
     }
     &__name.active {
         color: $white-color;
+    }
+}
+
+.event {
+    padding: 170px 0 60px 0;
+    background-image: url(../images/event_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.counter {
+    margin-top: 64px;
+    text-align: center;
+    &__title {
+        @extend %bebas-bold;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: $black-color;
+        letter-spacing: 2px;
+        line-height: 23px;
+    }
+    .timer-separator {
+        color: #701df7 !important;
+    }
+    #timer-text-273db5fa0c10f54d52a7e28dce997d12-hours,
+    #timer-text-273db5fa0c10f54d52a7e28dce997d12-minutes,
+    #timer-text-273db5fa0c10f54d52a7e28dce997d12-days {
+        text-transform: uppercase !important;
+        margin-top: 5px !important;
+        font-family: Ubuntu Regular, sans-serif !important;
+    }
+    .timer-flipchart-top.timer-flipchart-face,
+    .timer-flipchart-back.timer-flipchart-face {
+        font-family: Ubuntu-Bold, sans-serif !important;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fe810f;
+    border-radius: 25px;
+    min-height: 525px;
+    &__input {
+        @include title;
+        font-size: 20px;
+        width: 340px;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.87);
+        border-radius: 8px;
+    }
+    &__policy {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+    }
+    &__checkbox {
+        width: 25px;
+        height: 25px;
+        background: $white-color;
+        border: none;
+        border-radius: 3px;
+        flex-shrink: 0;
+    }
+    &__button {
+        border-radius: 60px;
+        padding: 20px 0;
+        width: 340px;
     }
 }
 @import "./media";

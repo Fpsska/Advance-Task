@@ -11734,14 +11734,19 @@ th {
   font-weight: 700;
 }
 
-.btn_review, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle {
+.btn_review, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle, .form__input {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
 
-.title-section, .about__title, .presents__description {
+.title-section, .about__title, .presents__description, .counter__title {
   font-family: "BebasNeueBold";
   font-weight: 700;
+}
+
+.container {
+  max-width: 1155px;
+  margin: 0 auto;
 }
 
 .btn_review.btn_review {
@@ -11763,10 +11768,15 @@ th {
 svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  fill: transparent;
 }
 
 .yellow-bg {
   background-color: #fde509;
+}
+
+.yellow-bg_big {
+  font-size: 40px;
 }
 
 .title-section {
@@ -11774,6 +11784,10 @@ svg {
   font-size: 68px;
   color: #000;
   text-transform: uppercase;
+}
+
+.title-section_event {
+  font-size: 32px;
 }
 
 .title {
@@ -11839,11 +11853,6 @@ svg {
 body {
   position: relative;
   background-color: #fff;
-}
-
-.container {
-  max-width: 1155px;
-  margin: 0 auto;
 }
 
 .header {
@@ -12035,7 +12044,7 @@ body {
 }
 
 .reviews {
-  margin-top: 150px;
+  margin: 150px 0 200px 0;
 }
 
 .reviews__button {
@@ -12109,4 +12118,96 @@ body {
 
 .reviews__name.active {
   color: #fff;
+}
+
+.event {
+  padding: 170px 0 60px 0;
+  background-image: url(../images/event_background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.counter {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.counter__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 2px;
+  line-height: 23px;
+}
+
+.counter .timer-separator {
+  color: #701df7 !important;
+}
+
+.counter #timer-text-273db5fa0c10f54d52a7e28dce997d12-hours,
+.counter #timer-text-273db5fa0c10f54d52a7e28dce997d12-minutes,
+.counter #timer-text-273db5fa0c10f54d52a7e28dce997d12-days {
+  text-transform: uppercase !important;
+  margin-top: 5px !important;
+  font-family: Ubuntu Regular, sans-serif !important;
+}
+
+.counter .timer-flipchart-top.timer-flipchart-face,
+.counter .timer-flipchart-back.timer-flipchart-face {
+  font-family: Ubuntu-Bold, sans-serif !important;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fe810f;
+  border-radius: 25px;
+  min-height: 525px;
+}
+
+.form__input {
+  color: #000;
+  font-size: 20px;
+  width: 340px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+}
+
+.form__policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+}
+
+.form__checkbox {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.form__button {
+  border-radius: 60px;
+  padding: 20px 0;
+  width: 340px;
 }
