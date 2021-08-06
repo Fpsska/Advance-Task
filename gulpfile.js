@@ -3,17 +3,17 @@ const { src, dest, watch, parallel, series } = require("gulp");
 const scss = require("gulp-sass"); // минификация
 const concat = require("gulp-concat"); // конкатенация + имя
 const browserSync = require("browser-sync").create(); // live update 
-const uglify = require("gulp-uglify-es").default; //
+//const uglify = require("gulp-uglify-es").default; //
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin"); // отпимизация img
 const del = require("del"); // удаление dist-папки
-//const ghpages = require('gh-pages'); // gh-pages for dist folder
+const ghpages = require('gh-pages'); // gh-pages for dist folder
 
 
-// ghpages.publish('dist', {
-//     repo: 'https://github.com/Fpsska/Advance-Task.git',
-//     message: 'Auto-generated commit'
-// });
+ghpages.publish('dist', {
+    repo: 'https://github.com/Fpsska/Advance-Task.git',
+    message: 'Auto-generated commit'
+});
 
 function cleanDist() {
     return del("dist");
@@ -33,7 +33,7 @@ function images() {
             })
         ]
         ))
-        .pipe(dest("dist/img"));
+        .pipe(dest("dist/assets/images"));
 }
 
 function scripts() {
@@ -44,7 +44,7 @@ function scripts() {
         "app/assets/js/main.js"
     ])
         .pipe(concat("main.min.js")) 
-        .pipe(uglify())   
+        // .pipe(uglify())   
         .pipe(dest("app/assets/js"))  
         .pipe(browserSync.stream());
 }
@@ -83,10 +83,11 @@ function build() {
     return src([
         "app/*.html",
         "app/assets/css/style.css",
-        "app/assets/js/main.js"
+        "app/assets/fonts/**/*", 
+        "app/assets/js/main.min.js"
     ], { base: "app" })
         .pipe(dest([
-            "dist/assets"
+            "dist/"
         ]));
 }
 
@@ -98,5 +99,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, build);
 exports.default = parallel(styles, scripts, browsersync, watching);

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const reviewBtn = document.querySelectorAll(".reviews__button")
+    const reviewBtn = document.querySelectorAll(".reviews__button");
     reviewBtn.forEach(item => {
         item.addEventListener("click", () => {
             reviewBtn.forEach(item => {
@@ -8,10 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.add("active")
         })
     })
-    const reviewCard = document.querySelectorAll(".reviews__card");
-    const reviewName = document.querySelectorAll(".reviews__name");
-    const reviewImage = document.querySelectorAll(".reviews__image");
-    
+    // /. review tabs
+
     $('.timetable__slider').owlCarousel({
         items: 3,
         nav: false,
@@ -96,5 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+    // /. sliders
 });
 
