@@ -1,4 +1,5 @@
-@import "./reset.scss";
+@import "./reset";
+@import "./custom";
 @import "./vars";
 @import "./fonts";
 
@@ -22,6 +23,10 @@ body {
         color: #090909;
         display: block;
         text-align: end;
+        transition: 0.25s linear;
+        &:hover {
+            color: $white-color;
+        }
     }
 }
 .about {
@@ -74,12 +79,29 @@ body {
         box-shadow: 0px 0px 26px 3px rgba(53, 53, 53, 0.38);
         border-radius: 48px;
     }
+    &__image {
+        width: 100%;
+    }
 }
 .timetable {
     margin: 100px 0 200px 0;
+    .owl-dots {
+        text-align: center;
+        margin-top: 34px;
+    }
+    .owl-dots button.owl-dot {
+        width: 17px;
+        height: 16px;
+        border-radius: 50%;
+        background: rgba(93, 6, 235, 0.5);
+        margin: 0 3px;
+    }
+    .owl-dots button.owl-dot.active {
+        background: #5d06eb;
+    }
 }
 .card {
-    min-width: 362px;
+    width: 362px;
     min-height: 562px;
     height: 100%;
     padding: 30px 34px;
@@ -92,6 +114,9 @@ body {
         color: $black-color;
         text-transform: uppercase;
     }
+    &__list {
+        height: 100%;
+    }
     &__date {
         @extend %ub-regular;
         font-size: 16px;
@@ -99,7 +124,7 @@ body {
     }
 }
 .rules {
-    padding: 100px 0;
+    padding: 100px 0 130px 0;
     background-image: url(../images/rules_background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -136,7 +161,7 @@ body {
     &__item {
         position: relative;
         &::before {
-            content: url(../images/arrw-right.svg);
+            content: url(../images/arrw_right.svg);
             position: absolute;
             top: -35%;
             left: 95%;
@@ -145,7 +170,7 @@ body {
     &__item_second {
         position: relative;
         &::before {
-            content: url(../images/arrw-left.svg);
+            content: url(../images/arrw_left.svg);
             position: absolute;
             top: -55%;
             left: -10%;
@@ -175,18 +200,20 @@ body {
 
 .reviews {
     margin: 150px 0 200px 0;
+    &__col_second {
+        margin: 0 20px 0 20px;
+    }
     &__button {
         border: 1px solid #5e07eb;
         background: $white-color;
         color: $black-color;
-        width: 100%;
+        width: 238px;
         border-radius: 80px;
         padding: 15px 0;
     }
     &__button.active {
         color: $white-color;
         background: linear-gradient(90deg, #5800e8 0%, #7d2dff 98.44%);
-        width: 100%;
         border-radius: 80px;
         padding: 15px 0;
     }
@@ -295,6 +322,10 @@ body {
         background-repeat: no-repeat;
     }
     &__description {
+        transition: .25s linear;
+        &:hover {
+            color: rgba(255, 255, 255, 0.87);
+        }
         &::before {
             content: "";
             display: inline-block;
@@ -333,6 +364,11 @@ body {
     &__icon {
         width: 33px;
         height: 33px;
+        transition: 0.25s linear;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.1)
+        }
     }
 }
 .contacts {
@@ -345,6 +381,13 @@ body {
     }
     &__item {
         margin-bottom: 2px;
+    }
+    &__number,
+    &__email {
+        transition: 0.25s linear;
+        &:hover {
+            color: $black-color;
+        }
     }
     :last-child {
         margin-right: 0;

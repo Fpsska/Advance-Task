@@ -7,11 +7,11 @@ const uglify = require("gulp-uglify-es").default; //
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin"); // отпимизация img
 const del = require("del"); // удаление dist-папки
-// const ghpages = require('gh-pages'); // gh-pages for dist folder
+//const ghpages = require('gh-pages'); // gh-pages for dist folder
 
 
 // ghpages.publish('dist', {
-//     repo: 'https://github.com/Fpsska/Bouncy-Landing.git',
+//     repo: 'https://github.com/Fpsska/Advance-Task.git',
 //     message: 'Auto-generated commit'
 // });
 
@@ -22,19 +22,18 @@ function cleanDist() {
 function images() {
     return src("app/assets/images/**/*")
         .pipe(imagemin([
-            imagemin({
-                progressive: true,
-                svgoPlugins: [
-                    {
-                        removeViewBox: false,
-                    },
-                ],
-                interlaced: true,
-                optimizationLevel: 3,
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
             })
         ]
         ))
-        .pipe(dest("dist/assets/images"));
+        .pipe(dest("dist/img"));
 }
 
 function scripts() {
@@ -66,7 +65,7 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
-function browsersync() {  // live update 
+function browsersync() {  
     browserSync.init({
         server: {
             baseDir: "app/"

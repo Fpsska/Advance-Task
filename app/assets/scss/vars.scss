@@ -27,11 +27,6 @@ $orange-color: #fd6a0a;
     color: $black-color;
 }
 
-.container {
-    max-width: 1155px;
-    margin: 0 auto;
-}
-
 
 .btn_review.btn_review {
     @extend %ub-regular;
@@ -53,6 +48,7 @@ svg {
 }
 
 .yellow-bg {
+    padding: 0 8px;
     background-color: $yellow-color;
 }
 
@@ -111,3 +107,4 @@ svg {
         font-size: 32px;
     }
 }
+

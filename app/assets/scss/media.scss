@@ -1,39 +1,3 @@
-// @media (max-width: 320px) {
-//     .presents__item {
-//         &::before {
-//             display: none;
-//         }
-//     }
-//     #timer273db5fa0c10f54d52a7e28dce997d12 {
-//         min-width: 0 !important;
-//     }
-//     .card {
-//         width: auto;
-//     }
-//     .presents__number {
-//         width: 54px;
-//         height: 76px;
-//     }
-//     .about__speaker {
-//         left: 10%;
-//         top: 94%;
-//         width: 100%;
-//         font-size: 16px;
-//     }
-//     .registration__button {
-//         font-size: 28px;
-//     }
-// }
-
-@media (max-width: 768px) {
-
-}
-@media (max-width: 992px) {
-
-}
-@media (max-width: 1200px) {
-
-}
 @media (max-width: 1400px) {
     .presents__item {
         &::before {
@@ -43,10 +7,198 @@
         }
     }
     .presents__item_second {
-        &::before{
+        &::before {
             top: 115%;
             left: -15%;
             transform: rotate(-125deg);
         }
+    }
+    .about {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .presents__item {
+        &::before {
+            top: 75%;
+            left: 100%;
+            transform: rotate(125deg);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+    .registration {
+        :nth-child(2) {
+            margin-bottom: 100px;
+        }
+    }
+    .registration__item {
+        text-align: center;
+    }
+    .registration__button {
+        margin: 6px 0 100px 0;
+    }
+    .about__speaker {
+        top: 79%;
+        left: 45%;
+        width: auto;
+    }
+    .reviews {
+        margin: 150px 0;
+    }
+    .reviews__button {
+        width: 190px;
+        font-size: 16px;
+    }
+    .presents__item {
+        &::before {
+            top: 75%;
+            left: 90%;
+            transform: rotate(125deg);
+        }
+    }
+    .presents__item_second {
+        &::before {
+            top: 125%;
+            left: -7%;
+            transform: rotate(-125deg);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews__col_third {
+        width: 80%;
+
+        .reviews__button {
+            width: 100%;
+        }
+    }
+    // .reviews__button {
+    //     width: 100%;
+    // }
+    .reviews__col_second {
+        margin: 0 0 0 20px;
+    }
+    .rules {
+        background-image: url(../images/rules_background-mb.png);
+    }
+    .presents__item {
+        &::before {
+            top: 75%;
+            left: 82%;
+            transform: rotate(125deg);
+        }
+    }
+    .about__speaker {
+        top: 82.5%;
+        left: 32%;
+        width: auto;
+    }
+    .reviews__col_third {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timetable {
+        margin: 100px 0 120px 0;
+    }
+    .reviews__col_third {
+        margin-top: 20px;
+        width: auto;
+        .reviews__button {
+            width: 190px;
+        }
+    }
+    .reviews__col_second {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .presents__item {
+        &::before {
+            display: none;
+        }
+    }
+    .presents__item_second {
+        &::before {
+            display: none;
+        }
+    }
+    #timer273db5fa0c10f54d52a7e28dce997d12 {
+        min-width: 313px !important;
+        height: auto !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        position: absolute !important;
+    }
+    .timer-separator {
+        padding: 0 !important;
+    }
+    .card {
+        width: auto;
+    }
+    .presents__number {
+        width: 54px;
+        height: 76px;
+    }
+    .counter__time {
+        min-height: 110px;
+        position: relative;
+    }
+    .form__input,
+    .form__button {
+        max-width: 280px;
+    }
+    .reviews__card {
+        margin: auto;
+    }
+    .about__speaker {
+        left: 10%;
+        top: 83.5%;
+        width: 100%;
+    }
+    .registration__button {
+        font-size: 22px;
+        margin: 6px 0 50px 0;
+    }
+    .registration {
+        :nth-child(2) {
+            margin-bottom: 50px;
+        }
+    }
+    .event {
+        padding: 120px 0 40px 0;
+        background-image: url(../images/event_background-mb.png);
+        background-size: 100% 100%;
+    }
+    .form__description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .rules {
+        padding: 130px 0;
+    }
+    .reviews__col_second {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .registration__button {
+        font-size: 18px;
+    }
+    .about__speaker {
+        left: 5%;
+        font-size: 18px;
+        top: 84.5%;
+        width: auto;
     }
 }
