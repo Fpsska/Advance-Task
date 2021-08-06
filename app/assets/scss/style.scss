@@ -79,7 +79,7 @@ body {
     margin: 100px 0 200px 0;
 }
 .card {
-    width: 362px;
+    min-width: 362px;
     min-height: 562px;
     height: 100%;
     padding: 30px 34px;
@@ -147,8 +147,8 @@ body {
         &::before {
             content: url(../images/arrw-left.svg);
             position: absolute;
-            top: -46%;
-            left: -15%;
+            top: -55%;
+            left: -10%;
         }
     }
     &__title {
@@ -205,7 +205,7 @@ body {
     &__card.active {
         background: linear-gradient(180deg, #ffae18 0%, #fd5907 75.35%);
     }
-    &__image {
+    .reviews__image.reviews__image {
         border-radius: 100%;
         border: 2px solid #fd6108;
         width: 120px;
@@ -215,7 +215,7 @@ body {
     &__image.active {
         border: 2px solid $white-color;
     }
-    &__image_main {
+    .reviews__image_main.reviews__image_main {
         width: 275px;
         height: 275px;
         padding: 5px;
@@ -274,7 +274,8 @@ body {
     &__input {
         @include title;
         font-size: 20px;
-        width: 340px;
+        max-width: 340px;
+        width: 100%;
         padding: 22px;
         background: rgba(255, 255, 255, 0.87);
         border-radius: 8px;
@@ -309,7 +310,8 @@ body {
     &__button {
         border-radius: 60px;
         padding: 20px 0;
-        width: 340px;
+        max-width: 340px;
+        width: 100%;
     }
 }
 

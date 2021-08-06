@@ -41,6 +41,7 @@ function scripts() {
     return src([
         "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
         "node_modules/jquery/dist/jquery.js",
+        "node_modules/owl.carousel/dist/owl.carousel.js",
         "app/assets/js/main.js"
     ])
         .pipe(concat("main.min.js")) 
@@ -52,6 +53,7 @@ function scripts() {
 function styles() {       
     return src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
+        "node_modules/owl.carousel/dist/assets/owl.carousel.css",
         "app/assets/scss/style.scss"
     ])
         .pipe(scss({ outputStyle: "expanded" })) 
