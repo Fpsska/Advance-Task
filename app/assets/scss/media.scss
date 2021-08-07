@@ -73,16 +73,15 @@
 }
 
 @media (max-width: 768px) {
+    .about {
+        background-position: 67% 100%;
+    }
     .reviews__col_third {
         width: 80%;
-
         .reviews__button {
             width: 100%;
         }
     }
-    // .reviews__button {
-    //     width: 100%;
-    // }
     .reviews__col_second {
         margin: 0 0 0 20px;
     }
@@ -97,7 +96,7 @@
         }
     }
     .about__speaker {
-        top: 82.5%;
+        top: 79%;
         left: 32%;
         width: auto;
     }
@@ -107,6 +106,9 @@
 }
 
 @media (max-width: 480px) {
+    .about {
+        background-position: 60% 100%;
+    }
     .timetable {
         margin: 100px 0 120px 0;
     }
@@ -160,7 +162,7 @@
     .about__speaker {
         left: 10%;
         top: 83.5%;
-        width: 100%;
+        width: auto;
     }
     .registration__button {
         font-size: 22px;
@@ -181,7 +183,16 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+    .about {
+        background-position: 55% 100%;
+    }
+    .about__speaker {
+        left: 5%;
+        font-size: 18px;
+        top: 84.5%;
+        width: auto;
+    }
     .rules {
         padding: 130px 0;
     }
@@ -192,10 +203,12 @@
     .registration__button {
         font-size: 18px;
     }
+}
+
+@media (max-width: 320px) {
     .about__speaker {
         left: 5%;
-        font-size: 18px;
-        top: 84.5%;
-        width: auto;
+        top: 86.5%;
+        font-size: 16px;
     }
 }
