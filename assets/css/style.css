@@ -24720,6 +24720,22 @@ body {
   margin: 100px 0 200px 0;
 }
 
+.timetable__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 100%;
+}
+
+.timetable .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .timetable .owl-dots {
   text-align: center;
   margin-top: 34px;
@@ -24739,8 +24755,8 @@ body {
 
 .card {
   width: 362px;
-  min-height: 562px;
   height: 100%;
+  min-height: 562px;
   padding: 30px 34px;
   background: #fff;
   border: 2px solid #fd6a0a;
@@ -25274,9 +25290,6 @@ body {
   }
   .timer-separator {
     padding: 0 !important;
-  }
-  .card {
-    width: auto;
   }
   .presents__number {
     width: 54px;
