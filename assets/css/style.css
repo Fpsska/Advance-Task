@@ -24724,6 +24724,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -25228,6 +25231,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .about {
+    background-position: 67% 100%;
+  }
   .reviews__col_third {
     width: 80%;
   }
@@ -25248,7 +25254,7 @@ body {
             transform: rotate(125deg);
   }
   .about__speaker {
-    top: 82.5%;
+    top: 79%;
     left: 32%;
     width: auto;
   }
@@ -25258,6 +25264,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .about {
+    background-position: 60% 100%;
+  }
   .timetable {
     margin: 100px 0 120px 0;
   }
@@ -25309,7 +25318,7 @@ body {
   .about__speaker {
     left: 10%;
     top: 83.5%;
-    width: 100%;
+    width: auto;
   }
   .registration__button {
     font-size: 22px;
@@ -25328,7 +25337,16 @@ body {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+  .about {
+    background-position: 55% 100%;
+  }
+  .about__speaker {
+    left: 5%;
+    font-size: 18px;
+    top: 84.5%;
+    width: auto;
+  }
   .rules {
     padding: 130px 0;
   }
@@ -25339,10 +25357,12 @@ body {
   .registration__button {
     font-size: 18px;
   }
+}
+
+@media (max-width: 320px) {
   .about__speaker {
     left: 5%;
-    font-size: 18px;
-    top: 84.5%;
-    width: auto;
+    top: 86.5%;
+    font-size: 16px;
   }
 }
