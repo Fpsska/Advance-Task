@@ -85,6 +85,15 @@ body {
 }
 .timetable {
     margin: 100px 0 200px 0;
+    &__slider-item {
+        display: flex;
+        flex: 1 0 auto;
+        height: 100%;
+    }
+
+    .owl-stage {
+        display: flex;
+    }
     .owl-dots {
         text-align: center;
         margin-top: 34px;
@@ -100,10 +109,10 @@ body {
         background: #5d06eb;
     }
 }
-.card {
+.card {    
     width: 362px;
-    min-height: 562px;
     height: 100%;
+    min-height: 562px;
     padding: 30px 34px;
     background: $white-color;
     border: 2px solid $orange-color;
