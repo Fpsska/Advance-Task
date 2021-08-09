@@ -66,6 +66,9 @@ body {
 }
 
 .registration {
+    &__item {
+        text-align: center;
+    }
     &__title {
         @extend %ub-bold;
         font-size: 20px;
