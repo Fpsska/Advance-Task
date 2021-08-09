@@ -11906,6 +11906,7 @@ video {
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
+  font-style: normal;
 }
 
 a {
@@ -24695,6 +24696,10 @@ body {
   left: 65%;
   font-size: 20px;
   color: #fff;
+}
+
+.registration__item {
+  text-align: center;
 }
 
 .registration__title {
