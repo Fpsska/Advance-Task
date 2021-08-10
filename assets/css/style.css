@@ -25049,9 +25049,9 @@ body {
 }
 
 .form__description {
-  -webkit-transition: .25s linear;
-  -o-transition: .25s linear;
-  transition: .25s linear;
+  -webkit-transition: 0.25s linear;
+  -o-transition: 0.25s linear;
+  transition: 0.25s linear;
 }
 
 .form__description:hover {
