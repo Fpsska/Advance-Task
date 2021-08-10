@@ -43,29 +43,29 @@ function scripts() {
         "node_modules/owl.carousel/dist/owl.carousel.js",
         "app/assets/js/main.js"
     ])
-        .pipe(concat("main.min.js")) 
+        .pipe(concat("main.min.js"))
         // .pipe(uglify())   
-        .pipe(dest("app/assets/js"))  
+        .pipe(dest("app/assets/js"))
         .pipe(browserSync.stream());
 }
 
-function styles() {       
+function styles() {
     return src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
         "node_modules/owl.carousel/dist/assets/owl.carousel.css",
         "app/assets/scss/style.scss"
     ])
-        .pipe(scss({ outputStyle: "expanded" })) 
-        .pipe(concat("style.css")) 
+        .pipe(scss({ outputStyle: "expanded" }))
+        .pipe(concat("style.css"))
         .pipe(autoprefixer({
             overrideBrowserslist: ["last 10 version"],
             grid: true
         }))
-        .pipe(dest("app/assets/css")) 
+        .pipe(dest("app/assets/css"))
         .pipe(browserSync.stream());
 }
 
-function browsersync() {  
+function browsersync() {
     browserSync.init({
         server: {
             baseDir: "app/"
@@ -83,7 +83,7 @@ function build() {
     return src([
         "app/*.html",
         "app/assets/css/style.css",
-        "app/assets/fonts/**/*", 
+        "app/assets/fonts/**/*",
         "app/assets/js/main.min.js"
     ], { base: "app" })
         .pipe(dest([
@@ -99,5 +99,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, build);
+exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
