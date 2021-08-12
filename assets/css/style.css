@@ -24520,7 +24520,7 @@ fieldset:disabled .btn {
   font-weight: 700;
 }
 
-.btn_review, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle, .form__input, .requisites__item, .policy__item {
+.reviews__button_comment, .description, .list__item, .about, .about__date, .about__speaker, .card__date, .presents__subtitle, .form__input, .requisites__item, .policy__item {
   font-family: "Ubuntu-Regular";
   font-weight: 400;
 }
@@ -24530,7 +24530,16 @@ fieldset:disabled .btn {
   font-weight: 700;
 }
 
-.btn_review.btn_review {
+.line-clamp.line-clamp {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+
+.reviews__button_comment.reviews__button_comment {
   background: #e7e7e7;
   color: #000;
   border-radius: 80px;
@@ -24958,6 +24967,15 @@ body {
 
 .reviews__name.active {
   color: #fff;
+}
+
+.reviews__comment {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
 }
 
 .event {
