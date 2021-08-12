@@ -209,6 +209,13 @@ body {
 
 .reviews {
     margin: 150px 0 200px 0;
+    &__comment {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 7;
+    }
     &__slider-item {
         display: flex;
         justify-content: center;

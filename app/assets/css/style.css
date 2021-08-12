@@ -24536,15 +24536,6 @@ fieldset:disabled .btn {
   display: flex;
 }
 
-.line-clamp.line-clamp {
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
-}
-
 .reviews__button_comment.reviews__button_comment {
   background: #e7e7e7;
   color: #000;
@@ -24891,6 +24882,15 @@ body {
 
 .reviews {
   margin: 150px 0 200px 0;
+}
+
+.reviews__comment {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
 }
 
 .reviews__slider-item {

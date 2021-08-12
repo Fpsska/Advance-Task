@@ -33,14 +33,6 @@ $orange-color: #fd6a0a;
     display: flex;
 }
 
-.line-clamp.line-clamp {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-}
-
 .reviews__button_comment.reviews__button_comment {
     @extend %ub-regular;
     background: #e7e7e7;

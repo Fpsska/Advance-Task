@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     reviewCards.forEach(item => {
         item.addEventListener("click", () => {
-            console.log("cliked")
             reviewCards.forEach(item => {
                 item.classList.remove("active")
             })
@@ -120,10 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     let btnComment = document.querySelector(".reviews__button_comment");
-    let commentText = document.querySelector(".line-clamp");
+    let commentText = document.querySelector(".reviews__comment");
 
     btnComment.addEventListener("click", () => {
-        commentText.classList.toggle("line-clamp");
+        if (commentText.style.WebkitLineClamp < 100) {
+            commentText.style.WebkitLineClamp = 100
+        } else {
+            commentText.style.WebkitLineClamp = 7
+        }
     })
 
     // /. show comment
