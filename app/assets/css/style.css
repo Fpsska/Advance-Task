@@ -24672,6 +24672,8 @@ body {
   position: relative;
   padding-top: 140px;
   min-height: 1190px;
+  background: -o-radial-gradient(64.97% 40.14%, 68.02% 214.98%, #FD4B04 2.34%, #FFB51A 100%);
+  background: radial-gradient(68.02% 214.98% at 64.97% 40.14%, #FD4B04 2.34%, #FFB51A 100%);
   background-image: url(../images/header_background.jpg);
   background-position: center;
   background-repeat: no-repeat;

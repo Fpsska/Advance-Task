@@ -34,6 +34,7 @@ body {
     position: relative;
     padding-top: 140px;
     min-height: 1190px;
+    background: radial-gradient(68.02% 214.98% at 64.97% 40.14%, #FD4B04 2.34%, #FFB51A 100%);
     background-image: url(../images/header_background.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -275,15 +276,6 @@ body {
     &__name {
         text-align: center;
     }
-    // &__card.active {
-    //     background: linear-gradient(180deg, #ffae18 0%, #fd5907 75.35%);
-    // }
-    // .reviews__image.active {
-    //     border: 2px solid $white-color;
-    // }
-    // &__name.active {
-    //     color: $white-color;
-    // }
 }
 
 .event {
