@@ -29,6 +29,10 @@ $orange-color: #fd6a0a;
 
 // /.vars
 
+.owl-stage {
+    display: flex;
+}
+
 .line-clamp.line-clamp {
     overflow: hidden;
     text-overflow: ellipsis;

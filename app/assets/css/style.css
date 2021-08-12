@@ -24530,6 +24530,12 @@ fieldset:disabled .btn {
   font-weight: 700;
 }
 
+.owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .line-clamp.line-clamp {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -24747,12 +24753,6 @@ body {
   height: 100%;
 }
 
-.timetable .owl-stage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .timetable .owl-dots {
   text-align: center;
   margin-top: 34px;
@@ -24893,6 +24893,19 @@ body {
   margin: 150px 0 200px 0;
 }
 
+.reviews__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 100%;
+}
+
 .reviews__col_second {
   margin: 0 20px 0 20px;
 }
@@ -24937,10 +24950,18 @@ body {
   padding: 10px 10px;
 }
 
-.reviews__card.active {
+.reviews .reviews__card.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffae18), color-stop(75.35%, #fd5907));
   background: -o-linear-gradient(top, #ffae18 0%, #fd5907 75.35%);
   background: linear-gradient(180deg, #ffae18 0%, #fd5907 75.35%);
+}
+
+.reviews .reviews__card.active .reviews__image.reviews__image {
+  border: 2px solid #fff;
+}
+
+.reviews .reviews__card.active .reviews__name {
+  color: #fff;
 }
 
 .reviews .reviews__image.reviews__image {
@@ -24951,31 +24972,14 @@ body {
   padding: 2px;
 }
 
-.reviews__image.active {
-  border: 2px solid #fff;
-}
-
-.reviews .reviews__image_main.reviews__image_main {
-  width: 275px;
-  height: 275px;
+.reviews .reviews__image_main {
+  width: 275px !important;
+  height: 275px !important;
   padding: 5px;
 }
 
 .reviews__name {
   text-align: center;
-}
-
-.reviews__name.active {
-  color: #fff;
-}
-
-.reviews__comment {
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
 }
 
 .event {
