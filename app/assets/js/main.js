@@ -103,5 +103,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     // /. sliders
+
+
+    let btnComment = document.querySelector(".reviews__button_comment");
+    let commentText = document.querySelector(".line-clamp");
+
+    btnComment.addEventListener("click", () => {
+        commentText.classList.toggle("line-clamp");
+    })
+
+    // /. show comment
 });
 

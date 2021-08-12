@@ -1,13 +1,13 @@
 const { src, dest, watch, parallel, series } = require("gulp");
 
-const scss = require("gulp-sass"); // минификация
-const concat = require("gulp-concat"); // конкатенация + имя
-const browserSync = require("browser-sync").create(); // live update 
+const scss = require("gulp-sass"); 
+const concat = require("gulp-concat"); 
+const browserSync = require("browser-sync").create(); 
 //const uglify = require("gulp-uglify-es").default; //
 const autoprefixer = require("gulp-autoprefixer");
-const imagemin = require("gulp-imagemin"); // отпимизация img
-const del = require("del"); // удаление dist-папки
-const ghpages = require('gh-pages'); // gh-pages for dist folder
+const imagemin = require("gulp-imagemin"); 
+const del = require("del"); 
+const ghpages = require('gh-pages'); 
 
 
 ghpages.publish('dist', {
@@ -99,5 +99,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, build);
 exports.default = parallel(styles, scripts, browsersync, watching);

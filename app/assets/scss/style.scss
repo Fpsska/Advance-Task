@@ -265,6 +265,13 @@ body {
     &__name.active {
         color: $white-color;
     }
+    &__comment {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 7;
+    }
 }
 
 .event {
